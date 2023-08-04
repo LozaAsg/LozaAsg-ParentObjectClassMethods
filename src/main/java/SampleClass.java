@@ -57,11 +57,26 @@
 public class SampleClass {
     public int a;
     public boolean b;
-
     //    implement a custom .equals(SampleClass other){} method here.
+    
+    //@Override
+    public boolean equals(SampleClass other){
 
+        boolean str1 = this.a == other.a;
+        boolean str2 = this.b == other.b;
+
+        return str1 & str2;
+     
+    }
 
     //    implement a custom .toString(){} method here.
+
+    @Override
+    public String toString(){
+        String result = a + "," + b;
+        return result;
+    }
+
 
     
 }
